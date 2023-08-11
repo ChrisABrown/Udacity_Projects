@@ -3,32 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blog_X</title>
   </head>
   <body>
     <div id="container">
-      <div id="header" class="box"><h1>Blog_X</h1></div>
+      <div id="header"><h1 id="blog_title" class="box">Blog X</h1></div>
       <div id="sidebar" class="box">
-        <section><a href="blog_post.html">blog post 1</a></section>
-        <section><a href="blog_post2.html">blog post 2</a></section>
-        <section><a href="blog_post3.html">blog post 3</a></section>
+        <section>
+          <a href="blog_post.html">blog post 1</a>
+          <a href="blog_post2.html">blog post 2</a>
+          <a href="blog_post3.html">blog post 3</a>
+        </section>
       </div>
       <div id="content" class="box">
-        <h2>Featured Content</h2>
+        <h2 id="content-title">Featured Content</h2>
         <div id="nested-content">
-          <section class="feat-content">
+          <div class="feat-content">
             <a href="blog_post.html">
               <img
-                src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=985&q=80"
+                src="../Pictures/Dog.webp"
                 alt="A picture of a small dog"
                 height="350px"
                 width="300px"
               />
             </a>
-          </section>
-          <section class="feat-content">
+          </div>
+          <div class="feat-content">
             <a href="blog_post2.html">
               <img
                 src="https://images.unsplash.com/photo-1533007716222-4b465613a984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmV2ZXJhZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
@@ -37,8 +39,8 @@
                 width="300px"
               />
             </a>
-          </section>
-          <section class="feat-content">
+          </div>
+          <div class="feat-content">
             <a href="blog_post3.html">
               <img
                 src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXhlcmNpc2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
@@ -47,10 +49,12 @@
                 width="400px"
               />
             </a>
-          </section>
+          </div>
         </div>
       </div>
-      <div id="footer" class="box">Copyright ©2023 by Chris Brown</div>
+      <div id="footer">
+        <p>Copyright ©2023 by Chris Brown</p>
+      </div>
     </div>
   </body>
 </html>
