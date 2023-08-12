@@ -46,3 +46,13 @@ body {
   display: flex;
   justify-content: center;
 }
+#author_info {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 2px;
+}

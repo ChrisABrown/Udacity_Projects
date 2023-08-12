@@ -5,35 +5,38 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="stylesheet" href="../CSS/blog_post.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog_X</title>
+    <title>Blog X</title>
   </head>
   <body>
     <div id="blog_container">
-      <div id="blog_header">
-        <h1>Blog Post 1</h1>
-      </div>
+      <header id="blog_header">
+        <h1>Author Info</h1>
+      </header>
         <a class="link" href="index.html">Back to Home Page</a>
       </div>
       <div id="blog_content">
         <div class="main">
           <figure>
-            <img
+           
+            <figcaption>
+              <ul id="author_info">
+                <li><strong>Name:</strong> Chris Brown</li>
+                <li><strong>Title:</strong> Mr?</li>
+                <li><strong>Current Company:</strong> Accenture</li>
+                <li><strong>Avatar:</strong> <img src="favicon.ico" alt="small picture of Luffy"/></li>
+                <li><a class="link" href="https://github.com/ChrisABrown">GitHub</a></li>
+                <li><a class="link" href="https://www.linkedin.com/in/chris-b-359a7b22a/">LinkedIn</a></li>
+              </ul>
+            </figcaption>
+             <img
               src="../Pictures/Dog.webp"
               alt="A picture of a small dog"
               id="blog_pic"
             />
-            <figcaption>
-              <p>
-                Commodo nostrud occaecat minim deserunt ullamco eiusmod do
-                consequat nisi nulla. Exercitation quis magna minim qui laboris
-                minim ipsum esse qui. Eu do fugiat et id irure cillum proident
-                tempor exercitation dolor est aliqua elit sit.
-              </p>
-            </figcaption>
           </figure>
         </div>
       </div>
-      <div id="footer">Copyright ©2023 by Chris Brown</div>
+      <footer id="footer">Copyright ©2023 by Chris Brown</footer>
     </div>
   </body>
 </html>
