@@ -1,0 +1,37 @@
+#blog_container {
+  display: grid;
+}
+#blog_header {
+  color: rgb(179, 179, 179);
+  text-shadow: 2px 2px 4px #000000;
+}
+#blog_title {
+  display: flex;
+  justify-content: center;
+}
+#blog_content {
+  background-color: lightslategray;
+  border: 0.25em slategrey solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(61, 57, 56);
+}
+#blog_pic {
+  width: 85vw;
+  border-radius: 15px;
+  box-shadow: 5px 5px rgba(69, 69, 69, 0.338);
+}
+#footer {
+  font: 9pt Times italic;
+  display: flex;
+  justify-content: center;
+}
+#author_info {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 2px;
+}

@@ -1,0 +1,43 @@
+img {
+  height: 350px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+}
+.nested-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.content-title {
+  display: flex;
+  font-size: 30pt;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+.box {
+  background-color: lightslategray;
+  border: 0.25em slategrey solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(61, 57, 56);
+}
+.sidebar-flex {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+.links {
+  color: darkgoldenrod;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.links:hover {
+  opacity: 1;
+}
+.links:visited {
+  color: rgb(232, 197, 121);
+  opacity: 0.5;
+}
