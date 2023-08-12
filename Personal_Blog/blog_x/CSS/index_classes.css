@@ -10,6 +10,8 @@ img {
   justify-content: space-around;
   padding: 20px;
 }
+.feat-items {
+}
 .content-title {
   display: flex;
   font-size: 30pt;
