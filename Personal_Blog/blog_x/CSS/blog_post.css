@@ -3,11 +3,9 @@
 body {
   font: 14pt sans-serif;
 }
-.blog_box {
-  border: 1px red solid;
-}
 .link {
-  color: darkgoldenrod;
+  font-weight: bold;
+  color: rgb(90, 255, 82);
   text-decoration: none;
   opacity: 0.6;
   transition: 0.5s;
@@ -16,6 +14,6 @@ body {
   opacity: 1;
 }
 .link:visited {
-  color: rgb(232, 197, 121);
+  color: rgb(159, 4, 4);
   opacity: 0.5;
 }

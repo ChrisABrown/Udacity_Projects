@@ -1,7 +1,14 @@
 #blog_container {
   display: grid;
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas: 'hd hd hd hd';
 }
 #blog_header {
+  grid-area: hd;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   color: rgb(179, 179, 179);
   text-shadow: 2px 2px 4px #000000;
 }

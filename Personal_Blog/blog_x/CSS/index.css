@@ -37,7 +37,7 @@ body {
 }
 #author-card {
   display: grid;
-  width: 40%;
+  width: 500px;
   grid-template-rows: minmax(200px, auto);
   padding: 10px;
   background-color: bisque;
