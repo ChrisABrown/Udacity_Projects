@@ -32,6 +32,22 @@ body {
   padding: 5px;
   grid-area: side;
 }
+#author-card img {
+  border-radius: 10px;
+}
+#author-card {
+  display: grid;
+  width: 40%;
+  grid-template-rows: minmax(200px, auto);
+  padding: 10px;
+  background-color: bisque;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#author-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
 #content {
   grid-area: main;
 }

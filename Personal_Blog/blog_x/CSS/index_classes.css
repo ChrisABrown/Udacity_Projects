@@ -1,8 +1,10 @@
 img {
-  height: 350px;
+  height: 400px;
   width: 400px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+}
+.card-container {
+  display: flex;
+  justify-content: center;
 }
 .nested-content {
   display: flex;
@@ -10,7 +12,17 @@ img {
   justify-content: space-around;
   padding: 20px;
 }
+.feat-content {
+  padding: 5px;
+  border-radius: 10px;
+}
 .feat-items {
+  border-radius: 15px;
+  box-shadow: 5px 5px 1px rgba(82, 67, 72, 0.414);
+  transition: 0.5s;
+}
+.feat-items:hover {
+  box-shadow: 10px 10px 2px rgba(82, 67, 72, 0.414);
 }
 .content-title {
   display: flex;
