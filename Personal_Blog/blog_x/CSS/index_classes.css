@@ -13,6 +13,10 @@ img {
   padding: 20px;
 }
 .feat-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   border-radius: 10px;
 }

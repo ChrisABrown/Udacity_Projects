@@ -1,5 +1,6 @@
 @import 'blog_post.css';
 @import 'index_classes.css';
+@import 'blog_post_ids.css';
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
