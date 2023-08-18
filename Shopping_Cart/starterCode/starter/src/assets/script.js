@@ -4,21 +4,21 @@ const products = [
   {
     name: 'Cherries',
     price: 5,
-    quantity: 5,
+    quantity: 0,
     productId: productId,
     image: '../images/cherry.jpg',
   },
   {
     name: 'Oranges',
     price: 5,
-    quantity: 5,
+    quantity: 0,
     productId: productId,
     image: '../images/orange.jpg',
   },
   {
     name: 'Strawberries',
     price: 5,
-    quantity: 5,
+    quantity: 0,
     productId: productId,
     image: '../images/strawberry.jpg',
   },
@@ -27,15 +27,28 @@ const products = [
 const cart = []
 const addProductToCart = (productId) => {
   let item = products[productId]
-  products[productId].quantity -= 1
-  cart.push()
+  if (item in cart) {
+    products[productId].quantity += 1
+  } else {
+    products[productId].quantity += 1
+    cart.push(item)
+  }
 }
 
-/* Create a function named addProductToCart that takes in the product productId as an argument
-  - addProductToCart should get the correct product based on the productId
-  - addProductToCart should then increase the product's quantity
-  - if the product is not already in the cart, add it to the cart
-*/
+const increaseQuantity = (productId) => {
+  let item = products[productId]
+  item.quantity += 1
+}
+
+const decreaseQuantity = (productId) => {
+  let item = products[productId]
+  let index = item.findIndex()
+  if (item.quantity === 0 && item in cart) {
+    cart.splice(index, 1, item)
+  } else if (item.quantity > 0) {
+    item.quantity -= 1
+  }
+}
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
