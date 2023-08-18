@@ -1,21 +1,35 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
+let productId = Math.floor(Math.random() * (9999 - 1)) + 1
+const products = [
+  {
+    name: 'Cherries',
+    price: 5,
+    quantity: 5,
+    productId: productId,
+    image: '../images/cherry.jpg',
+  },
+  {
+    name: 'Oranges',
+    price: 5,
+    quantity: 5,
+    productId: productId,
+    image: '../images/orange.jpg',
+  },
+  {
+    name: 'Strawberries',
+    price: 5,
+    quantity: 5,
+    productId: productId,
+    image: '../images/strawberry.jpg',
+  },
+]
 
-/* Create 3 or more product objects using object literal notation 
-   Each product should include five properties
-   - name: name of product (string)
-   - price: price of product (number)
-   - quantity: quantity in cart should start at zero (number)
-   - productId: unique id for the product (number)
-   - image: picture of product (url string)
-*/
-
-/* Images provided in /images folder. All images from Unsplash.com
-   - cherry.jpg by Mae Mu
-   - orange.jpg by Mae Mu
-   - strawberry.jpg by Allec Gomes
-*/
-
-/* Declare an empty array named cart to hold the items in the cart */
+const cart = []
+const addProductToCart = (productId) => {
+  let item = products[productId]
+  products[productId].quantity -= 1
+  cart.push()
+}
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
@@ -54,7 +68,6 @@
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
-
 /* The following is for running unit tests. 
    To fully complete this project, it is expected that all tests pass.
    Run the following command in terminal to run tests
@@ -62,15 +75,15 @@
 */
 
 module.exports = {
-   products,
-   cart,
-   addProductToCart,
-   increaseQuantity,
-   decreaseQuantity,
-   removeProductFromCart,
-   cartTotal,
-   pay, 
-   emptyCart,
-   /* Uncomment the following line if completing the currency converter bonus */
-   // currency
+  products,
+  cart,
+  addProductToCart,
+  increaseQuantity,
+  decreaseQuantity,
+  removeProductFromCart,
+  cartTotal,
+  pay,
+  emptyCart,
+  /* Uncomment the following line if completing the currency converter bonus */
+  // currency
 }
