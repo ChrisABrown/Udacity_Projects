@@ -34,36 +34,51 @@ const getProduct = (productId) => {
 
 const addProductToCart = (productId) => {
   let item = getProduct(productId)
-  if (item.productId === productId && !(item in cart)) {
+  if (cart.includes(item)) {
     item.quantity += 1
-    cart.push(item)
   } else {
+    cart.push(item)
     item.quantity += 1
   }
 }
 
 const removeProductFromCart = (productId) => {
   let item = getProduct(productId)
-  if (item in cart) {
+  let index = cart.indexOf(item)
+  if (cart.includes(item)) {
     item.quantity = 0
-    cart.splice(products.indexOf(item), 1)
+    cart.splice(index, 1)
   }
 }
 
 const increaseQuantity = (productId) => {
-  let item = products[productId]
+  let item = getProduct(productId)
   item.quantity += 1
 }
 
 const decreaseQuantity = (productId) => {
-  let item = products[productId]
-  let index = item.findIndex()
-  if (item.quantity === 0 && item in cart) {
-    cart.splice(index, 1, item)
-  } else if (item.quantity > 0 && item in cart) {
+  let item = getProduct(productId)
+  let index = cart.indexOf(item)
+  if (item.quantity === 0 && cart.includes(item)) {
+    cart.splice(index, 1)
+  } else if (item.quantity > 0 && cart.includes(item)) {
     item.quantity -= 1
   }
 }
+
+/* Create a function named cartTotal that has no parameters
+  - cartTotal should iterate through the cart to get the total of all products
+  - cartTotal should return the sum of the products in the cart
+*/
+const cartTotal = () => {
+  let total = 0
+  for (let i = 0; i < cart.length - 1; i++) {
+    total += cart[i].price
+    return total
+  }
+  return total
+}
+
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
@@ -77,18 +92,6 @@ const pay = (amount) => {
   } else {
     return amount - total
   }
-}
-
-/* Create a function named cartTotal that has no parameters
-  - cartTotal should iterate through the cart to get the total of all products
-  - cartTotal should return the sum of the products in the cart
-*/
-const cartTotal = () => {
-  let total
-  cart.forEach((el) => {
-    total += el['price']
-  })
-  return total
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
