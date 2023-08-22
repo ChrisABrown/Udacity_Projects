@@ -1,5 +1,6 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 let productId = Math.floor(Math.random() * (9999 - 1)) + 1
+
 const products = [
   {
     name: 'Cherries',
@@ -72,9 +73,8 @@ const decreaseQuantity = (productId) => {
 */
 const cartTotal = () => {
   let total = 0
-  for (let i = 0; i < cart.length - 1; i++) {
-    total += cart[i].price
-    return total
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].price * cart[i].quantity
   }
   return total
 }
@@ -83,15 +83,18 @@ const cartTotal = () => {
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
 */
+let balance = 0
 const pay = (amount) => {
-  let total = cartTotal()
-  if (amount < total) {
-    return amount - total
-  } else if (amount === total) {
-    return 0
-  } else {
-    return amount - total
+  let total = parseInt(cartTotal(), 10)
+  let paid = amount - total
+  balance += paid
+  if (paid < 0) {
+    for (let i = 0; i < amount; i++) {
+      balance += i
+    }
+    return balance
   }
+  return balance
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
