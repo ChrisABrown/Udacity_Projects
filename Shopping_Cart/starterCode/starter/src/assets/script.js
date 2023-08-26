@@ -60,9 +60,12 @@ const increaseQuantity = (productId) => {
 const decreaseQuantity = (productId) => {
   let item = getProduct(productId)
   let index = cart.indexOf(item)
-  if (item.quantity === 0 && cart.includes(item)) {
+  if (item.quantity < 1) {
     cart.splice(index, 1)
-  } else if (item.quantity > 0 && cart.includes(item)) {
+  } else if (item.quantity === 1) {
+    item.quantity -= 1
+    cart.splice(index, 1)
+  } else if (item.quantity > 1 && cart.includes(item)) {
     item.quantity -= 1
   }
 }
@@ -83,18 +86,19 @@ const cartTotal = () => {
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
 */
-let balance = 0
+let balance
 const pay = (amount) => {
   let total = parseInt(cartTotal(), 10)
-  let paid = amount - total
-  balance += paid
-  if (paid < 0) {
-    for (let i = 0; i < amount; i++) {
-      balance += i
-    }
-    return balance
+  balance = Number(amount - total)
+  switch (balance) {
+    case balance < 0:
+      balance += amount
+      console.log(balance)
+      return balance
+    case balance > 0:
+    default:
+      return balance
   }
-  return balance
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
