@@ -1,0 +1,6 @@
+#Weird Mac files
+.DS_Store
+
+#npm files
+node_modules
+

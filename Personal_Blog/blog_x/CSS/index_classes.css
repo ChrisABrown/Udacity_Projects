@@ -2,14 +2,21 @@ img {
   height: 400px;
   width: 400px;
 }
+<<<<<<< HEAD
 .card-container {
   display: flex;
   justify-content: center;
+=======
+.feat-items {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+>>>>>>> shopping_cart
 }
 .nested-content {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
+<<<<<<< HEAD
   padding: 20px;
 }
 .feat-content {
@@ -27,6 +34,12 @@ img {
 }
 .feat-items:hover {
   box-shadow: 10px 10px 2px rgba(82, 67, 72, 0.414);
+=======
+}
+.feat-content {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+>>>>>>> shopping_cart
 }
 .content-title {
   display: flex;
