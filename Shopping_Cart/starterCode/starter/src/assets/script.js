@@ -91,12 +91,15 @@ const pay = (amount) => {
   let total = cartTotal()
   totalPaid += amount
   if (amount > total) {
-    return amount - total
+    return totalPaid - total
   } else if (amount < total) {
+    return total - totalPaid
+  } else if (amount === total && totalPaid === total) {
+    totalPaid = 0
+    return totalPaid
   } else {
-    totalPaid = total
+    return total - totalPaid
   }
-  return totalPaid - total
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
