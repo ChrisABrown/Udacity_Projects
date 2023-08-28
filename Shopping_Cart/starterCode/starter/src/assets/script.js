@@ -83,22 +83,20 @@ const cartTotal = () => {
 }
 
 /* Create a function named pay that takes in an amount as an argument
-  - pay will return a negative number if there is a remaining balance
+  - pay will return a negative number if there is a remaining totalPaid
   - pay will return a positive number if money should be returned to customer
 */
-let balance
+let totalPaid = 0
 const pay = (amount) => {
-  let total = parseInt(cartTotal(), 10)
-  balance = Number(amount - total)
-  switch (balance) {
-    case balance < 0:
-      balance += amount
-      console.log(balance)
-      return balance
-    case balance > 0:
-    default:
-      return balance
+  let total = cartTotal()
+  totalPaid += amount
+  if (amount > total) {
+    return amount - total
+  } else if (amount < total) {
+  } else {
+    totalPaid = total
   }
+  return totalPaid - total
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
