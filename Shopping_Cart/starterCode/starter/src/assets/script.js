@@ -90,21 +90,27 @@ let totalPaid = 0
 const pay = (amount) => {
   let total = cartTotal()
   totalPaid += amount
-  if (amount > total) {
+  if (amount < total || amount > total) {
     return totalPaid - total
-  } else if (amount < total) {
-    return total - totalPaid
   } else if (amount === total && totalPaid === total) {
     totalPaid = 0
     return totalPaid
-  } else {
-    return total - totalPaid
   }
+  console.log(total)
+  return totalPaid - total
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
 const emptyCart = () => {
-  cart.splice(0, cart.length)
+  cart = cart.splice(0, cart.length)
+  for (let i = 0; i < cart.length; i++) {
+    let item = getProduct(cart[i].productId)
+    if (cart.includes(item) && item.quantity >= 1) {
+      item.quantity = 0
+    } else {
+      cart = []
+    }
+  }
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
