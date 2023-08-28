@@ -1,6 +1,7 @@
 #blog_container {
   display: grid;
 <<<<<<< HEAD
+<<<<<<< HEAD
   grid-template-rows: minmax(100px, auto);
   grid-template-areas: 'hd hd hd hd';
 }
@@ -14,6 +15,10 @@
 }
 #blog_header {
 >>>>>>> shopping_cart
+=======
+}
+#blog_header {
+>>>>>>> develop
   color: rgb(179, 179, 179);
   text-shadow: 2px 2px 4px #000000;
 }
@@ -40,12 +45,15 @@
 #author_info {
   list-style: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
 =======
 >>>>>>> shopping_cart
+=======
+>>>>>>> develop
   color: white;
   text-shadow: 2px 2px 4px #000000;
   padding: 2px;

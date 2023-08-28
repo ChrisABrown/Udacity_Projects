@@ -3,6 +3,7 @@ img {
   width: 400px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .card-container {
   display: flex;
   justify-content: center;
@@ -11,11 +12,17 @@ img {
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
 >>>>>>> shopping_cart
+=======
+.feat-items {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+>>>>>>> develop
 }
 .nested-content {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding: 20px;
 }
@@ -35,11 +42,16 @@ img {
 .feat-items:hover {
   box-shadow: 10px 10px 2px rgba(82, 67, 72, 0.414);
 =======
+=======
+>>>>>>> develop
 }
 .feat-content {
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgb(61, 57, 56);
+<<<<<<< HEAD
 >>>>>>> shopping_cart
+=======
+>>>>>>> develop
 }
 .content-title {
   display: flex;
