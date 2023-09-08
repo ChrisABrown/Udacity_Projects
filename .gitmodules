@@ -1,3 +1,6 @@
 [submodule "course-JS-and-the-DOM"]
 	path = course-JS-and-the-DOM
 	url = https://github.com/ChrisABrown/course-JS-and-the-DOM
+[submodule "Landing_Page"]
+	path = Landing_Page
+	url = https://github.com/ChrisABrown/Landing_Page
